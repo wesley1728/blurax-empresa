@@ -14,7 +14,7 @@
         .chamada-design { font-size: 26px; color: #39FF14; font-weight: 900; margin-top: 30px; text-transform: uppercase; }
         .seta { font-size: 40px; margin: 5px 0; display: block; }
 
-        /* Barra do WhatsApp Sem Link (Apenas Texto para copiar) */
+        /* BOTÃO WHATSAPP */
         .barra-numero { 
             display: block; 
             background-color: #25D366; 
@@ -23,9 +23,16 @@
             margin-bottom: 40px; 
             font-weight: 900; 
             border-radius: 15px; 
-            font-size: 24px; 
+            font-size: 22px; 
             border: 3px solid #128C7E;
             letter-spacing: 1px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .barra-numero:hover {
+            background-color: #1ebe5d;
+            transform: scale(1.05);
         }
 
         .tabela-container { margin: 30px 0; background: #ffff00; color: #000; border-radius: 12px; padding: 15px; }
@@ -51,10 +58,10 @@
         <span class="seta">⬇️</span>
     </div>
 
-    <!-- NÚMERO DIRETO COMO VOCÊ PEDIU -->
-    <div class="barra-numero">
-        ⚠️ +55 47 9788-4064
-    </div>
+    <!-- BOTÃO WHATSAPP COM MENSAGEM AUTOMÁTICA -->
+    <a href="https://wa.me/554797884064?text=Olá,%20quero%20criar%20um%20design%20com%20a%20BLURAX" target="_blank" class="barra-numero">
+        💬 FALAR NO WHATSAPP
+    </a>
     
     <p class="objetivo">O OBJETIVO DA BLURAX É CRIAR PEÇAS ÚNICAS QUE ENCANTEM NOSSOS CLIENTES</p>
 
