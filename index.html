@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLURAX - Personalize sua Roupa</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; padding: 20px; color: #333; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        
+        h1 { color: #000; letter-spacing: 2px; }
+        .sub { font-weight: bold; margin-bottom: 30px; color: #555; }
+
+        /* Estilo dos Botões Principais */
+        .btn-main {
+            display: block; width: 100%; padding: 20px; margin: 15px 0;
+            font-size: 18px; font-weight: bold; text-transform: uppercase;
+            border: none; border-radius: 10px; cursor: pointer;
+            transition: 0.3s; text-decoration: none;
+        }
+        .btn-criar { background-color: #25D366; color: white; border: 4px solid #128C7E; }
+        .btn-ideia { background-color: #3498db; color: white; border: 4px solid #2980b9; }
+        
+        /* Tabela */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #000; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+
+        .regras { text-align: left; background: #fff3cd; padding: 15px; border-radius: 8px; margin: 20px 0; }
+        .objetivo { font-style: italic; font-weight: bold; color: #2c3e50; margin: 30px 0; }
+        
+        /* Botão Sobre com Toggle */
+        #sobre-content { display: none; padding: 15px; background: #eee; border-radius: 10px; margin-top: 10px; }
+        .btn-sobre { background: #333; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>BLURAX</h1>
+    <p class="sub">ENVIE A SUA IDEIA E NÓS PRODUZIMOS E ENVIAMOS PARA VOCÊ</p>
+
+    <!-- Botão 1: Criar Design -->
+    <a href="https://wa.me! Quero desenhar minha camisa agora. (Aqui o cliente enviará o desenho)" class="btn-main btn-criar">
+        CRIAR MEU DESIGN <br>
+        <span style="font-size: 12px;">[CLIQUE PARA DESENHAR E ENVIAR]</span>
+    </a>
+
+    <!-- Botão 2: Meu Design (Ideias/Textos) -->
+    <a href="https://wa.me! Tenho uma ideia de personalização. Quero enviar fotos e textos." class="btn-main btn-ideia">
+        MEU DESIGN <br>
+        <span style="font-size: 12px;">[ENVIAR FOTOS E TEXTOS]</span>
+    </a>
+
+    <p class="objetivo">O OBJETIVO DA BLURAX É CRIAR PEÇAS ÚNICAS QUE ENCANTEM NOSSOS CLIENTES</p>
+
+    <h3>TABELA DE PREÇOS</h3>
+    <table>
+        <tr>
+            <th>PRODUTO / TAMANHO</th>
+            <th>VALOR</th>
+        </tr>
+        <tr><td>Camisas (P, M, G)</td><td>R$ 150 - 250</td></tr>
+        <tr><td>Camisa GG</td><td>R$ 250 - 350</td></tr>
+        <tr><td>Tecido Qualidade (P, M, G)</td><td>R$ 350 - 400</td></tr>
+        <tr><td>Tecido Qualidade GG</td><td>R$ 400 - 550</td></tr>
+        <tr><td>Moletom (P, M, G)</td><td>R$ 500 - 600</td></tr>
+        <tr><td>Moletom GG</td><td>R$ 600 - 700</td></tr>
+    </table>
+
+    <div class="regras">
+        <strong>REGRAS:</strong><br>
+        1️⃣ ACEITAMOS TROCAS APENAS EM DEFEITOS<br>
+        2️⃣ PRAZO DE 15-20 DIAS<br>
+        3️⃣ NÃO ACEITAMOS CONTEÚDOS IMPRÓPRIOS<br>
+        4️⃣ FRETE DE R$100-200 (DESCONTO DE 10%)
+    </div>
+
+    <button class="btn-sobre" onclick="toggleSobre()">SOBRE</button>
+    <div id="sobre-content">
+        A Blurax foi criada com o objetivo de fazer os clientes terem a oportunidade de desenhar seus designs ou mandar as ideias de personalizações. Nós trabalhamos com qualquer peça de roupa e tecidos, queremos deixar nossos clientes com nossas peças únicas.
+    </div>
+</div>
+
+<script>
+    function toggleSobre() {
+        var x = document.getElementById("sobre-content");
+        if (x.style.display === "none" || x.style.display === "") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
