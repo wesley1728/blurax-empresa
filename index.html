@@ -5,25 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLURAX - Official</title>
     <style>
-        body { font-family: 'Arial Black', sans-serif; text-align: center; background-color: #000; color: #fff; margin: 0; padding: 0; }
-        .header-section { background: linear-gradient(180deg, #001a33 0%, #000000 100%); padding: 40px 20px; border-bottom: 1px solid #007bff; }
-        h1 { font-size: 45px; margin: 0; color: #00d4ff; text-transform: uppercase; letter-spacing: 3px; }
-        .sub-header { font-size: 20px; color: #ffffff; margin: 20px auto; font-weight: bold; text-transform: uppercase; }
+        body { 
+            font-family: 'Arial Black', sans-serif; 
+            text-align: center; 
+            background-color: #000; 
+            color: #fff; 
+            margin: 0; padding: 0;
+        }
+
+        /* Topo com Degradê Azul inspirado na sua imagem */
+        .header-section {
+            background: linear-gradient(180deg, #001a33 0%, #000000 100%);
+            padding: 50px 20px;
+            border-bottom: 2px solid #007bff;
+        }
+
+        h1 { 
+            font-size: 50px; 
+            margin: 0; 
+            color: #00d4ff; 
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        /* Texto abaixo do nome com LETRAS GRANDES */
+        .sub-header { 
+            font-size: 24px; 
+            color: #ffffff; 
+            margin: 20px auto; 
+            font-weight: bold;
+            max-width: 90%;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
         .container { max-width: 500px; margin: auto; padding: 20px; }
-        
-        /* Botões Verde Claro Fosco */
-        .btn-verde { display: block; background-color: #90EE90; color: #000; padding: 20px; margin: 15px 0; text-decoration: none; font-weight: 900; border-radius: 10px; font-size: 18px; text-transform: uppercase; border: none; }
-        
-        /* Tabela Amarela Organizada */
-        .tabela-container { margin: 30px 0; background: #ffff00; color: #000; border-radius: 10px; padding: 10px; }
+
+        /* BOTÃO ÚNICO - Verde Claro Fosco */
+        .btn-principal { 
+            display: block; 
+            background-color: #90EE90; /* Verde claro suave */
+            color: #000; 
+            padding: 25px; 
+            margin: 30px 0; 
+            text-decoration: none; 
+            font-weight: 900; 
+            border-radius: 15px; 
+            font-size: 20px; 
+            text-transform: uppercase;
+            border: 2px solid #000;
+            box-shadow: 0 4px 15px rgba(144, 238, 144, 0.3);
+        }
+
+        /* Tabela Amarela Organizada e Legível */
+        .tabela-container { 
+            margin: 30px 0; 
+            background: #ffff00; 
+            color: #000; 
+            border-radius: 12px; 
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(255, 255, 0, 0.2);
+        }
         table { width: 100%; border-collapse: collapse; }
-        th { border-bottom: 2px solid #000; padding: 10px; font-size: 16px; }
-        td { padding: 12px 8px; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: left; font-size: 14px; font-weight: bold; }
+        th { border-bottom: 2px solid #000; padding: 10px; font-size: 18px; text-transform: uppercase; }
+        td { padding: 12px 5px; border-bottom: 1px solid rgba(0,0,0,0.1); text-align: left; font-size: 15px; font-weight: bold; }
         .preco { text-align: right; }
 
-        .objetivo { color: #00d4ff; font-style: italic; margin: 25px 0; font-size: 16px; font-weight: bold; }
-        .regras { text-align: left; font-size: 14px; background: #111; padding: 15px; border-radius: 10px; border: 1px solid #333; line-height: 1.6; }
-        .btn-sobre { background: none; color: #444; border: 1px solid #222; padding: 10px; margin-top: 20px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 12px; }
+        .objetivo { color: #00d4ff; font-style: italic; margin: 30px 0; font-size: 18px; font-weight: bold; }
+        
+        .regras { 
+            text-align: left; 
+            font-size: 15px; 
+            background: #111; 
+            padding: 20px; 
+            border-radius: 10px; 
+            border: 1px solid #00d4ff;
+            line-height: 1.6;
+        }
+        
+        .btn-sobre { background: none; color: #444; border: 1px solid #222; padding: 10px; margin-top: 30px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 12px; }
     </style>
 </head>
 <body>
@@ -34,20 +94,22 @@
 </div>
 
 <div class="container">
-    <!-- Links de WhatsApp corrigidos abaixo -->
-    <a href="https://api.whatsapp.com! Quero criar meu design agora." class="btn-verde">CRIAR MEU DESIGN</a>
-    <a href="https://api.whatsapp.com! Tenho uma ideia (Meu Design) para enviar." class="btn-verde">MEU DESIGN</a>
+    
+    <!-- BOTÃO ÚNICO PARA TUDO: Abre o seu WhatsApp direto -->
+    <a href="https://wa.me! Gostaria de fazer uma personalização. Vou te mandar a peça (camisa, moletom, etc) e a ideia do design agora!" class="btn-principal">
+        QUERO MEU DESIGN PERSONALIZADO
+    </a>
     
     <p class="objetivo">O OBJETIVO DA BLURAX É CRIAR PEÇAS ÚNICAS QUE ENCANTEM NOSSOS CLIENTES</p>
 
     <div class="tabela-container">
         <table>
-            <thead><tr><th colspan="2">TABELA DE PREÇOS</th></tr></thead>
+            <thead><tr><th colspan="2">TABELA DE PREÇOS BLURAX</th></tr></thead>
             <tbody>
                 <tr><td>Camisas (P M G)</td><td class="preco">R$150-250</td></tr>
                 <tr><td>Camisa (GG)</td><td class="preco">R$250-350</td></tr>
-                <tr><td>P M G (Qualidade)</td><td class="preco">R$350-400</td></tr>
-                <tr><td>GG (Qualidade)</td><td class="preco">R$400-550</td></tr>
+                <tr><td>Premium (P M G)</td><td class="preco">R$350-400</td></tr>
+                <tr><td>Premium (GG)</td><td class="preco">R$400-550</td></tr>
                 <tr><td>Moletom (P M G)</td><td class="preco">R$500-600</td></tr>
                 <tr><td>Moletom (GG)</td><td class="preco">R$600-700</td></tr>
             </tbody>
@@ -55,14 +117,14 @@
     </div>
 
     <div class="regras">
-        <strong>REGRAS:</strong><br>
-        1️⃣ TROCAS APENAS EM DEFEITOS<br>
-        2️⃣ PRAZO DE 15-20 DIAS<br>
+        <strong>REGRAS DA EMPRESA:</strong><br>
+        1️⃣ TROCAS APENAS EM CASO DE DEFEITOS<br>
+        2️⃣ PRAZO DE PRODUÇÃO: 15-20 DIAS<br>
         3️⃣ NÃO ACEITAMOS CONTEÚDOS IMPRÓPRIOS<br>
-        4️⃣ FRETE R$100-200 (10% OFF)
+        4️⃣ FRETE R$100-200 (COM 10% DE DESCONTO)
     </div>
 
-    <button class="btn-sobre" onclick="alert('A Blurax permite que você crie seu próprio estilo em qualquer peça de roupa!')">SOBRE A EMPRESA</button>
+    <button class="btn-sobre" onclick="alert('A Blurax permite que você crie seu próprio estilo em qualquer peça de roupa. Você manda a ideia, nós produzimos e enviamos!')">SOBRE A EMPRESA</button>
 </div>
 
 </body>
