@@ -1,181 +1,251 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIBLA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIBLA | Design Personalizado</title>
+    <!-- Fonte Moderna -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #00d4ff;
+            --whatsapp: #25D366;
+            --bg: #050505;
+            --card-bg: #111111;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+        }
 
-<style>
-body {
-    margin:0;
-    font-family: Arial Black, sans-serif;
-    background:#000;
-    color:#fff;
-    text-align:center;
-}
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-.header {
-    padding:50px 20px;
-    background:linear-gradient(#001a33,#000);
-}
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-.logo {
-    font-size:50px;
-    color:#00d4ff;
-    letter-spacing:5px;
-    text-shadow:0 0 15px #00d4ff;
-}
+        .header {
+            padding: 60px 20px;
+            background: radial-gradient(circle at top, #001a33 0%, #050505 100%);
+            text-align: center;
+        }
 
-.sub {
-    margin-top:20px;
-    font-size:20px;
-    color:#fff;
-    font-weight:bold;
-}
+        .logo {
+            font-size: 64px;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: -2px;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+            margin-bottom: 10px;
+        }
 
-.btn {
-    display:block;
-    margin:20px auto;
-    padding:20px;
-    max-width:420px;
-    border-radius:15px;
-    font-weight:bold;
-    text-decoration:none;
-    font-size:18px;
-    transition:0.3s;
-}
+        .sub {
+            font-size: 14px;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            max-width: 300px;
+            margin: 0 auto;
+        }
 
-.btn-blue {
-    background:#00d4ff;
-    color:#000;
-}
+        .actions {
+            margin: 40px 0;
+        }
 
-.btn-green {
-    background:#25D366;
-    color:#fff;
-}
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px auto;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: none;
+        }
 
-.btn:hover {
-    transform:scale(1.05);
-}
+        .btn-blue {
+            background: var(--primary);
+            color: #000;
+        }
 
-.objetivo {
-    font-size:20px;
-    margin-top:30px;
-    font-weight:bold;
-}
+        .btn-green {
+            background: var(--whatsapp);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
 
-.tabela {
-    margin-top:30px;
-    padding:20px;
-    border-radius:12px;
-    background:linear-gradient(90deg,#001a33,#000,#001a33);
-}
+        .btn:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
 
-.tabela h2 {
-    color:#00d4ff;
-    margin-bottom:15px;
-}
+        .objetivo {
+            font-size: 14px;
+            color: var(--primary);
+            margin: 40px 0 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+        }
 
-.linha {
-    display:flex;
-    justify-content:space-between;
-    border-bottom:1px solid #333;
-    padding:10px 0;
-    font-weight:bold;
-}
+        .tabela {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid #222;
+        }
 
-.regras {
-    margin-top:25px;
-    background:#111;
-    padding:20px;
-    border-radius:10px;
-    text-align:left;
-    line-height:1.6;
-}
+        .tabela h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: left;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+        }
 
-.sobre-btn {
-    margin-top:20px;
-    color:#00d4ff;
-    cursor:pointer;
-    font-weight:bold;
-    text-decoration:underline;
-}
+        .linha {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #222;
+        }
 
-.sobre-texto {
-    display:none;
-    margin-top:10px;
-    background:#111;
-    padding:15px;
-    border-radius:10px;
-}
-</style>
+        .linha:last-child { border: none; }
+
+        .produto-nome {
+            font-weight: 600;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .produto-preco {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .regras {
+            margin-top: 30px;
+            background: #0a0a0a;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 13px;
+            color: var(--text-dim);
+            border: 1px dashed #333;
+        }
+
+        .sobre-section {
+            text-align: center;
+            margin-top: 40px;
+            padding-bottom: 50px;
+        }
+
+        .sobre-btn {
+            background: none;
+            border: 1px solid #333;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .sobre-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .sobre-texto {
+            display: none;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--text-dim);
+            text-align: left;
+            padding: 20px;
+            background: #111;
+            border-radius: 10px;
+        }
+    </style>
 </head>
-
 <body>
 
 <div class="header">
     <div class="logo">SIBLA</div>
-    <div class="sub">ENVIE A SUA IDEIA E NÓS PRODUZIMOS E ENVIAMOS PARA VOCÊ</div>
+    <div class="sub">Design autoral sob encomenda</div>
 </div>
 
 <div class="container">
+    <div class="actions">
+        <a href="https://www.canva.com" target="_blank" class="btn btn-blue">
+            <span>✏️</span> CRIAR MEU DESIGN
+        </a>
 
-<a href="https://www.canva.com" target="_blank" class="btn btn-blue">
-✏️ CRIAR MEU DESIGN
-</a>
-
-<a href="https://wa.me/554797884064?text=Olá,%20quero%20enviar%20meu%20design%20para%20a%20SIBLA" target="_blank" class="btn btn-green">
-📩 ENVIAR MEU DESIGN
-</a>
-
-<div class="objetivo">
-O OBJETIVO DA SIBLA É CRIAR PEÇAS ÚNICAS QUE ENCANTEM NOSSOS CLIENTES
-</div>
-
-<div class="tabela">
-    <h2>TABELA</h2>
-
-    <div class="linha">
-        <span>CAMISA P M G GG</span>
-        <span>R$240 - 350</span>
+        <a href="https://wa.me" target="_blank" class="btn btn-green">
+            <span>📩</span> ENVIAR NO WHATSAPP
+        </a>
     </div>
 
-    <div class="linha">
-        <span>CAMISA PREMIUM P M G GG</span>
-        <span>R$350 - 499</span>
+    <div class="objetivo">Propósito Sibla</div>
+    <p style="text-align: center; font-size: 15px; color: #ccc; margin-bottom: 40px;">
+        Criamos peças únicas que traduzem a sua identidade.
+    </p>
+
+    <div class="tabela">
+        <h2>TABELA DE VALORES</h2>
+
+        <div class="linha">
+            <div class="produto-nome">CAMISA <br><small style="color: #666">P ao GG</small></div>
+            <div class="produto-preco">R$240 - 350</div>
+        </div>
+
+        <div class="linha">
+            <div class="produto-nome">CAMISA PREMIUM <br><small style="color: #666">P ao GG</small></div>
+            <div class="produto-preco">R$350 - 499</div>
+        </div>
+
+        <div class="linha">
+            <div class="produto-nome">MOLETOM <br><small style="color: #666">P ao GG</small></div>
+            <div class="produto-preco">R$499 - 700</div>
+        </div>
+
+        <div class="linha">
+            <div class="produto-nome">MOLETOM PREMIUM <br><small style="color: #666">P ao GG</small></div>
+            <div class="produto-preco">R$699 - 800</div>
+        </div>
     </div>
 
-    <div class="linha">
-        <span>MOLETOM P M G GG</span>
-        <span>R$499 - 700</span>
+    <div class="regras">
+        ⚠️ Trocas apenas por defeitos de fabricação<br>
+        ⏳ Prazo de produção: 15-20 dias<br>
+        🚫 Não aceitamos conteúdos impróprios<br>
+        🚚 Frete R$100-200 (10% OFF incluso)
     </div>
 
-    <div class="linha">
-        <span>MOLETOM PREMIUM P M G GG</span>
-        <span>R$699 - 800</span>
+    <div class="sobre-section">
+        <button class="sobre-btn" onclick="toggleSobre()">SAIBA MAIS SOBRE A SIBLA</button>
+        <div id="sobre" class="sobre-texto">
+            A SIBLA nasceu para transformar ideias em vestuário. Seja criando seu design do zero ou enviando uma referência, trabalhamos com tecidos de alta qualidade para garantir que cada peça seja exclusiva.
+        </div>
     </div>
-</div>
-
-<div class="regras">
-TROCAS APENAS EM DEFEITOS <br>
-PRAZO DE 15-20 DIAS <br>
-NÃO ACEITAMOS CONTEÚDOS IMPRÓPRIOS <br>
-FRETE DE R$100-200 COM 10% DE DESCONTO
-</div>
-
-<div class="sobre-btn" onclick="toggleSobre()">SOBRE</div>
-
-<div id="sobre" class="sobre-texto">
-A SIBLA foi criada com o objetivo de permitir que clientes criem seus próprios designs ou enviem ideias de personalização. Trabalhamos com qualquer peça de roupa e tecidos, sempre buscando entregar peças únicas.
-</div>
-
 </div>
 
 <script>
 function toggleSobre(){
     let s = document.getElementById("sobre");
-    s.style.display = s.style.display === "block" ? "none" : "block";
+    s.style.display = (s.style.display === "block") ? "none" : "block";
 }
 </script>
 
